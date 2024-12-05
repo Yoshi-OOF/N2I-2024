@@ -1,60 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impact of Climate Change on Oceans</title>
+    <title>Impact du Changement Climatique sur les Océans</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="styles/aos.css">
 </head>
 <body>
+    <!-- Navigation -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Ocean Awareness</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#interactive">Interactive</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Ocean Awareness</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">À Propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#interactive">Interactif</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    <main class="container mt-4">
-        <section id="home" class="mb-4">
-            <h1>Welcome to Our Ocean</h1>
-            <p>Discover the impact of climate change on our oceans and what we can do to help.</p>
-        </section>
-        <section id="impact" class="mb-4">
-            <h2>Impact of Climate Change</h2>
-            <p>Climate change is having a profound effect on our oceans. Rising temperatures, acidification, and pollution are just a few of the issues that are threatening marine life and ecosystems.</p>
-            <img src="images/ocean.jpg" alt="Ocean" class="img-fluid">
-        </section>
-        <section id="solutions" class="mb-4">
-            <h2>Solutions</h2>
-            <p>There are many ways we can help mitigate the impact of climate change on our oceans. Reducing carbon emissions, protecting marine areas, and promoting sustainable fishing practices are just a few examples.</p>
-        </section>
-        <section id="about" class="mb-4">
-            <h2>About Us</h2>
-            <p>We are a group of ocean enthusiasts dedicated to raising awareness about the impact of climate change on our oceans and promoting solutions to protect them.</p>
-        </section>
-        <section id="interactive" class="mb-4">
-            <h2>Interactive Features</h2>
-            <p>Explore our new interactive features to learn more about the impact of climate change on oceans.</p>
-            <button class="btn btn-primary" onclick="alert('Thank you for interacting!')">Click Me</button>
-        </section>
-    </main>
-    <footer class="bg-light text-center py-3">
-        <p>&copy; 2024 Ocean Awareness. All rights reserved.</p>
+
+    <!-- Section Accueil avec Image Bannière et Particules -->
+    <section id="home" class="vh-100 d-flex align-items-center bg-image" style="background-image: url('images/ocean.jpg'); background-size: cover; background-position: center;">
+        <!-- Conteneur tsParticles -->
+        <div id="tsparticles"></div>
+
+        <div class="container text-center text-white" data-aos="fade-up">
+            <h1 class="display-4 typewriter">Protégeons Nos Océans</h1>
+            <p class="lead">Découvrez l'impact du changement climatique sur les océans et ce que nous pouvons faire pour aider.</p>
+            <a href="#impact" class="btn btn-lg btn-outline-light mt-3">En Savoir Plus</a>
+        </div>
+    </section>
+
+    <!-- Section Impact -->
+    <section id="impact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-down">Impact du Changement Climatique</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="images/ocean_bg.jpg" alt="Océan" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <p>Le changement climatique a des effets profonds sur nos océans. L'augmentation des températures, l'acidification et la pollution menacent la vie marine et les écosystèmes. La montée du niveau de la mer affecte les zones côtières, tandis que les événements météorologiques extrêmes deviennent plus fréquents et intenses.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-water text-primary me-2"></i>Augmentation de la température des eaux</li>
+                        <li class="list-group-item"><i class="fas fa-biohazard text-primary me-2"></i>Acidification des océans</li>
+                        <li class="list-group-item"><i class="fas fa-recycle text-primary me-2"></i>Pollution plastique</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Solutions avec Animations GSAP -->
+    <section id="solutions" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-down">Solutions</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-tree fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">Réduction des Émissions de CO₂</h5>
+                            <p class="card-text">Limiter les émissions de gaz à effet de serre pour atténuer le réchauffement climatique.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-water fa-3x text-info mb-3"></i>
+                            <h5 class="card-title">Protection des Zones Marines</h5>
+                            <p class="card-text">Créer des réserves marines pour préserver la biodiversité et les habitats naturels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-fish fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title">Pêche Durable</h5>
+                            <p class="card-text">Promouvoir des pratiques de pêche responsables pour éviter la surpêche et protéger les espèces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos avec Parallax -->
+    <section id="about" class="py-5 parallax" style="background-image: url('images/parallax_bg.jpg');" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4">À Propos de Nous</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p>Nous sommes un groupe de passionnés des océans dédiés à sensibiliser le public sur l'impact du changement climatique sur les milieux marins et à promouvoir des solutions pour les protéger. Notre mission est d'informer, d'éduquer et d'inspirer des actions concrètes pour préserver la santé de nos océans pour les générations futures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Interactif avec Animations GSAP -->
+    <section id="interactive" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-down">Fonctionnalités Interactives</h2>
+            <div class="text-center mb-4" data-aos="zoom-in">
+                <button class="btn btn-primary btn-lg" id="interactiveButton">
+                    <i class="fas fa-hand-pointer me-2"></i>Interagissez Avec Nous
+                </button>
+                <div id="interactiveMessage" class="mt-3"></div>
+            </div>
+
+            <!-- Quiz Interactif -->
+            <div id="quiz-container" class="mb-4" data-aos="fade-up">
+                <!-- Le quiz sera généré ici par JavaScript -->
+            </div>
+            <div class="text-center" data-aos="fade-up">
+                <button class="btn btn-success" id="submit-quiz">Soumettre les Réponses</button>
+            </div>
+            <div id="quiz-result" class="mt-3 text-center" data-aos="fade-up"></div>
+        </div>
+    </section>
+
+    <!-- Section Témoignages avec Carousel Animé -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-down">Témoignages</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="text-center">
+                            <img src="images/testimonial1.jpg" class="rounded-circle mb-3" alt="Témoignage 1" width="100" height="100">
+                            <h5>Marie Dupont</h5>
+                            <p class="text-muted">"Ce site m'a ouvert les yeux sur l'importance de protéger nos océans. Merci !"</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <img src="images/testimonial2.jpg" class="rounded-circle mb-3" alt="Témoignage 2" width="100" height="100">
+                            <h5>Jean Martin</h5>
+                            <p class="text-muted">"Les informations et les animations sont incroyables. Un site incontournable."</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <img src="images/testimonial3.jpg" class="rounded-circle mb-3" alt="Témoignage 3" width="100" height="100">
+                            <h5>Sophie Leblanc</h5>
+                            <p class="text-muted">"Le quiz interactif est une excellente façon d'apprendre tout en s'amusant."</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Ocean Awareness. Tous droits réservés.</p>
+            <div>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <!-- tsParticles JS -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+    <!-- GSAP JS -->
+    <script src="scripts/gsap.min.js"></script>
+    <script src="scripts/scrollTrigger.min.js"></script>
+    <!-- AOS JS -->
+    <script src="scripts/aos.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts personnalisés -->
     <script src="animations.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
