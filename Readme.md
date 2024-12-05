@@ -12,13 +12,20 @@ Bienvenue dans le projet N2I-2024. Ce document servira de guide pour comprendre 
 7. [Nouvelles fonctionnalités interactives](#nouvelles-fonctionnalités-interactives)
 
 ## Introduction
-Une brève description du projet et de ses objectifs.
+Une brève description du projet et de ses objectifs. Ce projet utilise Bootstrap pour le style et la mise en page, offrant une interface utilisateur moderne et réactive.
 
 ## Installation
-Instructions pour installer et configurer le projet.
+Instructions pour installer et configurer le projet. Assurez-vous d'inclure les fichiers CSS et JS de Bootstrap dans votre projet. Vous pouvez les ajouter via un CDN comme suit :
+
+```html
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+```
 
 ## Utilisation
-Exemples et explications sur la façon d'utiliser le projet.
+Exemples et explications sur la façon d'utiliser le projet. Le fichier `index.html` utilise des classes Bootstrap pour la mise en page et le style. Par exemple, la barre de navigation utilise la classe `navbar` de Bootstrap et les boutons utilisent la classe `btn`.
 
 ## Contribuer
 Informations sur la manière de contribuer au projet.

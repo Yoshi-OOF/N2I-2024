@@ -5,44 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impact of Climate Change on Oceans</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#interactive">Interactive</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Ocean Awareness</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interactive">Interactive</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <section id="home">
+    <main class="container mt-4">
+        <section id="home" class="mb-4">
             <h1>Welcome to Our Ocean</h1>
             <p>Discover the impact of climate change on our oceans and what we can do to help.</p>
         </section>
-        <section id="impact">
+        <section id="impact" class="mb-4">
             <h2>Impact of Climate Change</h2>
             <p>Climate change is having a profound effect on our oceans. Rising temperatures, acidification, and pollution are just a few of the issues that are threatening marine life and ecosystems.</p>
-            <img src="images/ocean.jpg" alt="Ocean">
+            <img src="images/ocean.jpg" alt="Ocean" class="img-fluid">
         </section>
-        <section id="solutions">
+        <section id="solutions" class="mb-4">
             <h2>Solutions</h2>
             <p>There are many ways we can help mitigate the impact of climate change on our oceans. Reducing carbon emissions, protecting marine areas, and promoting sustainable fishing practices are just a few examples.</p>
         </section>
-        <section id="about">
+        <section id="about" class="mb-4">
             <h2>About Us</h2>
             <p>We are a group of ocean enthusiasts dedicated to raising awareness about the impact of climate change on our oceans and promoting solutions to protect them.</p>
         </section>
-        <section id="interactive">
+        <section id="interactive" class="mb-4">
             <h2>Interactive Features</h2>
             <p>Explore our new interactive features to learn more about the impact of climate change on oceans.</p>
-            <button onclick="alert('Thank you for interacting!')">Click Me</button>
+            <button class="btn btn-primary" onclick="alert('Thank you for interacting!')">Click Me</button>
         </section>
     </main>
-    <footer>
+    <footer class="bg-light text-center py-3">
         <p>&copy; 2024 Ocean Awareness. All rights reserved.</p>
     </footer>
     <script src="animations.js"></script>

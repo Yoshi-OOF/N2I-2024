@@ -13,25 +13,6 @@ header {
     padding: 1rem;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
 main {
     padding: 2rem;
 }
@@ -50,27 +31,8 @@ footer {
     bottom: 0;
 }
 
-/* Interactive Features */
-button {
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #1558b0;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 1rem;
-    }
-
     footer {
         position: static;
     }
