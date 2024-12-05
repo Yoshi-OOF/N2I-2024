@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('img');
     const textElements = document.querySelectorAll('p, h1, h2');
+    const interactiveButton = document.querySelector('button');
 
     // Function to animate images
     const animateImages = () => {
@@ -16,6 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
             text.style.transition = 'opacity 1s ease-in-out';
             text.style.opacity = 1;
             text.style.transitionDelay = `${index * 0.2}s`;
+        });
+    };
+
+    // Function to animate interactive button
+    const animateButton = () => {
+        interactiveButton.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
+        interactiveButton.addEventListener('mouseover', () => {
+            interactiveButton.style.backgroundColor = '#1558b0';
+            interactiveButton.style.transform = 'scale(1.1)';
+        });
+
+        interactiveButton.addEventListener('mouseout', () => {
+            interactiveButton.style.backgroundColor = '#1a73e8';
+            interactiveButton.style.transform = 'scale(1)';
         });
     };
 
@@ -43,4 +58,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial animations
     animateImages();
     animateText();
+    animateButton();
 });
