@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
   	extend: {
+		  fontFamily: {
+			  'sans': "nexaLight"
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
